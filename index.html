@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Generador de Contraseñas</title>
+    <link rel="icon" href="assets/key.svg" />
+    <meta
+      name="description"
+      content="Hola bienvenido a mi Portafolio web, 
+    soy Franco Navarro, Desarrollador y diseñador web"
+    />
+    <link rel="canonical" href="https://franco-navarro.github.io/Portafolio-CV/" />
+    <link rel="favicon" href="https://franco-navarro.github.io/Portafolio-CV/assets/favicon.jpg" />
+    <link rel="apple-touch-icon" href="https://franco-navarro.github.io/Portafolio-CV/assets/favicon.jpg" />
+    <meta name="theme-color" content="#439BED" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" name="twitter:title" content="Portafolio CV - Franco" />
+    <meta property="og:image" name="twitter:image" content="https://franco-navarro.github.io/Portafolio-CV/assets/favicon.jpg" />
+    <meta property="og:url" name="twitter:url" content="https://franco-navarro.github.io/Portafolio-CV" />
+    <meta
+      property="og:description"
+      name="twitter:description"
+      content=" Hola bienvenido a mi Portafolio web, 
+    soy Franco Navarro, Desarrollador y diseñador web"
+    />
+    <link rel="canonical" href="https://franco-navarro.github.io/Portafolio-CV" />
+  </head>
+
+  <body id="body">
+    <section class="section password">
+      <aside class="password-opacity"></aside>
+      <article class="container password-container">
+        <div class="password-form">
+          <h1>Generador de Contraseñas</h1>
+          <div class="password-visualize">
+            <input type="text" readonly value=" " id="visualize" />
+            <button title="Copiar Contraseña">
+              <svg id="copyButton" width="24" height="26" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="copyToClipBoard()">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M26.5263 5.89474V10.3158H11.7895C11.0078 10.3158 10.2581 10.6263 9.70537 11.1791C9.15263 11.7318 8.84211 12.4815 8.84211 13.2632V26.5263H2.94737C2.16568 26.5263 1.416 26.2158 0.863264 25.6631C0.310525 25.1103 0 24.3606 0 23.5789V5.89474C0 5.11305 0.310525 4.36337 0.863264 3.81063C1.416 3.25789 2.16568 2.94737 2.94737 2.94737H5.89474C5.89474 2.16568 6.20526 1.416 6.758 0.863264C7.31074 0.310525 8.06042 0 8.84211 0H17.6842C18.4659 0 19.2156 0.310525 19.7683 0.863264C20.3211 1.416 20.6316 2.16568 20.6316 2.94737H23.5789C24.3606 2.94737 25.1103 3.25789 25.6631 3.81063C26.2158 4.36337 26.5263 5.11305 26.5263 5.89474ZM8.84211 2.94737V5.89474L8.84212 5.89474V2.94737L17.6842 2.94737H8.84211ZM14.7369 13.2632H25.0526C25.8343 13.2632 26.584 13.5737 27.1368 14.1264C27.6895 14.6792 28 15.4288 28 16.2105V26.5263C28 27.308 27.6895 28.0577 27.1368 28.6104C26.584 29.1632 25.8343 29.4737 25.0526 29.4737H14.7369C13.9552 29.4737 13.2055 29.1632 12.6528 28.6104C12.1 28.0577 11.7895 27.308 11.7895 26.5263V16.2105C11.7895 15.4288 12.1 14.6792 12.6528 14.1264C13.2055 13.5737 13.9552 13.2632 14.7369 13.2632Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="password-length options">
+            <label for="long">Largo de Contraseña</label>
+            <input type="number" name="long" id="long" value="8" title="Caracteres Min 8 - Max 32 " />
+          </div>
+          <div class="password-uppercase options">
+            <label for="uppercase">Incluir Mayusculas</label>
+            <input type="checkbox" name="upper" id="uppercase" class="options-checkbox" checked />
+          </div>
+          <div class="password-lowercase options">
+            <label for="lowercase">Incluir Minusculas</label>
+            <input type="checkbox" name="lower" id="lowercase" class="options-checkbox" checked />
+          </div>
+          <div class="password-number options">
+            <label for="number">Incluir Numeros</label>
+            <input type="checkbox" name="number" id="number" class="options-checkbox" checked />
+          </div>
+          <div class="password-symbol options">
+            <label for="symbol">Incluir Simbolos</label>
+            <input type="checkbox" name="symbol" id="symbol" class="options-checkbox" checked />
+          </div>
+          <button class="password-button" id="generate">
+            <p>Generar Contraseña</p>
+            <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0.540074 22.6347L0.0148212 26.307C-0.0176397 26.535 0.0033895 26.7673 0.0762447 26.9858C0.1491 27.2042 0.271782 27.4026 0.434585 27.5654C0.597387 27.7282 0.795843 27.8509 1.01425 27.9238C1.23266 27.9966 1.46502 28.0176 1.69296 27.9852L5.36528 27.4599C5.92169 27.3813 7.31643 23.6363 7.31643 23.6363C7.31643 23.6363 8.01676 24.2372 8.30313 24.3277C8.91444 24.5206 9.50943 23.9211 9.70974 23.3128L10.284 20.6836C10.284 20.6836 11.1401 21.1168 11.4502 21.1806C11.8449 21.2622 12.2277 21.0189 12.4992 20.7459C12.6623 20.5833 12.7848 20.3845 12.8568 20.1657L13.2515 17.716C13.2515 17.716 14.253 17.9935 14.5958 18.0336C14.986 18.0781 15.3658 17.8793 15.6448 17.5988L17.3333 15.9118C18.7626 16.3749 20.292 16.4347 21.7531 16.0844C23.2142 15.7341 24.5503 14.9874 25.6142 13.9265C27.142 12.3947 28 10.3196 28 8.15615C28 5.9927 27.142 3.91756 25.6142 2.38579C24.0824 0.857983 22.0073 0 19.8439 0C17.6804 0 15.6053 0.857983 14.0735 2.38579C13.0123 3.44954 12.2654 4.78561 11.9151 6.24676C11.5648 7.70791 11.6247 9.2374 12.0882 10.6667L0.958495 21.7949C0.731321 22.0218 0.58441 22.3167 0.540074 22.6347ZM22.9019 5.09811C23.7114 5.90998 24.1659 7.00968 24.1659 8.15615C24.1659 9.30262 23.7114 10.4023 22.9019 11.2142L16.7858 5.09811C17.5977 4.28863 18.6974 3.83407 19.8439 3.83407C20.9903 3.83407 22.09 4.28863 22.9019 5.09811Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </article>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
